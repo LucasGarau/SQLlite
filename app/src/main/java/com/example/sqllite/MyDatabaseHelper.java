@@ -21,7 +21,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     // Method is called during creation of the database
     @Override
     public void onCreate(SQLiteDatabase database) {
-        database.execSQL("DROP TABLE IF EXISTS DBName");
+
         database.execSQL(DATABASE_CREATE);
 
     }
