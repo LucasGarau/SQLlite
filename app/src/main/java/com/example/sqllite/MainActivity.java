@@ -28,7 +28,10 @@ public class MainActivity extends AppCompatActivity {
         spin = findViewById(R.id.spinnerCategories);
         aaa.setText(MyDBA.selectRecords().getString(1));
         Spinner desplegable = (Spinner) this.findViewById(R.id.spinnerCategories);
-
+        MyDBA.createRecords("0","Home");
+        MyDBA.createRecords("1","Work");
+        MyDBA.createRecords("2","Mobile");
+        MyDBA.createRecords("3","Other");
         Cursor cur = MyDBA.selectRecords();
         startManagingCursor(cur);
         String[] from = new String[]{"name"};
